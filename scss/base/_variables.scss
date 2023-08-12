@@ -1,0 +1,63 @@
+$poppins-font-path: "../..assets/fonts";
+
+@font-face {
+  // This is parsed as a normal function call that takes a quoted string.
+  src: url("#{$poppins-font-path}/Poppins-Regular.ttf") format("ttf");
+
+  font-family: "Poppins";
+  font-weight: 400;
+}
+
+@font-face {
+  // This is parsed as a normal function call that takes a quoted string.
+  src: url("#{$poppins-font-path}/Poppins-Italic.ttf") format("ttf");
+
+  font-family: "Poppins";
+  font-weight: 400;
+}
+
+@font-face {
+  // This is parsed as a normal function call that takes a quoted string.
+  src: url("#{$poppins-font-path}/Poppins-ExtraBoldItalic.ttf") format("ttf");
+
+  font-family: "Poppins";
+  font-weight: 800;
+}
+
+@font-face {
+  // This is parsed as a normal function call that takes a quoted string.
+  src: url("#{$poppins-font-path}/Poppins-ExtraBold.ttf") format("ttf");
+
+  font-family: "Poppins";
+  font-weight: 800;
+}
+
+@font-face {
+  // This is parsed as a normal function call that takes a quoted string.
+  src: url("#{$poppins-font-path}/Poppins-BoldItalic.ttf") format("ttf");
+
+  font-family: "Poppins";
+  font-weight: 700;
+}
+
+@font-face {
+  // This is parsed as a normal function call that takes a quoted string.
+  src: url("#{$poppins-font-path}/Poppins-Bold.ttf") format("ttf");
+
+  font-family: "Poppins";
+  font-weight: 700;
+}
+
+// Font
+$font: "Poppins", sans-serif;
+
+// Primary Colors
+$purple: hsl(259, 100%, 65%);
+$light-red: hsl(0, 100%, 67%);
+
+// Neutral colors
+$white: hsl(0, 0%, 100%);
+$off-white: hsl(0, 0%, 94%);
+$light-grey: hsl(0, 0%, 86%);
+$smokey-grey: hsl(0, 1%, 44%);
+$off-black: hsl(0, 0%, 8%);
