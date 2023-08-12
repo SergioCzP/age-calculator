@@ -1,0 +1,8 @@
+@use "base/variables" as v;
+@use "base/mixins" as m;
+
+.calc {
+  background-color: v.$white;
+  padding: 5rem 2.5rem;
+  border-radius: 2.5rem 2.5rem 15rem 2.5rem;
+}

@@ -1,0 +1,17 @@
+@use "base/variables" as v;
+@use "base/mixins" as m;
+
+.results {
+  font-size: 6rem;
+  font-weight: bolder;
+
+  &__result {
+    font-weight: bolder;
+    color: v.$off-black;
+  }
+
+  &__number {
+    color: v.$purple;
+    font-weight: bolder;
+  }
+}

@@ -33,3 +33,41 @@ h3,
 p {
   margin: 0;
 }
+
+label {
+  text-transform: uppercase;
+  color: v.$smokey-grey;
+  font-weight: 800;
+  letter-spacing: 0.25rem;
+  padding: 1rem 0;
+}
+
+input {
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 2rem 1.5rem;
+  border: solid 0.1rem v.$light-grey;
+  border-radius: 1rem;
+  font-size: 2rem;
+  color: v.$off-black;
+}
+
+.bg-off-white {
+  background-color: v.$off-white;
+}
+
+.hg-100-vh {
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 45rem;
+  width: 95%;
+  margin: 0 auto;
+}
+
+.content-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

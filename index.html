@@ -14,50 +14,54 @@
     <title>Frontend Mentor | Age calculator app</title>
     <link rel="stylesheet" href="build/css/app.css" />
   </head>
-  <body class="bg-off-white hg-100-vh content-center">
-    <main class="calc container content-center">
-      <form class="form">
-        <div class="inputs">
-          <div class="inputs__number">
-            <div class="inputs__input">
-              <label for="day" class="inputs__label">Day</label>
-              <input type="number" id="day" placeholder="DD" />
+  <body class="bg-off-white">
+    <main class="content-center hg-100-vh">
+      <div class="calc container">
+        <form class="form">
+          <div class="inputs">
+            <div class="inputs__number">
+              <div class="inputs__input">
+                <label for="day" class="inputs__label">Day</label>
+                <input type="number" id="day" placeholder="DD" />
+              </div>
+
+              <div class="inputs__input">
+                <label for="month" class="inputs__label">Month</label>
+                <input type="number" id="month" placeholder="MM" />
+              </div>
+
+              <div class="inputs__input">
+                <label for="year" class="inputs__label">Year</label>
+                <input type="number" id="year" placeholder="YYYY" />
+              </div>
             </div>
 
-            <div class="inputs__input">
-              <label for="month" class="inputs__label">Month</label>
-              <input type="number" id="month" placeholder="MM" />
-            </div>
-
-            <div class="inputs__input">
-              <label for="year" class="inputs__label">Year</label>
-              <input type="number" id="year" placeholder="YYYY" />
+            <div class="submit-line">
+              <button type="submit" class="inputs__submit">
+                <img
+                  class="inputs__arrow"
+                  src="assets/images/icon-arrow.svg"
+                  alt="arrow"
+                />
+              </button>
             </div>
           </div>
+        </form>
 
-          <button type="submit" class="inputs__submit">
-            <img
-              class="inputs__arrow"
-              src="assets/images/icon-arrow.svg"
-              alt="arrow"
-            />
-          </button>
-        </div>
-      </form>
+        <section class="results" aria-label="Results of calculating age">
+          <p class="results__result">
+            <span class="results__number" id="result-year">38</span>years
+          </p>
 
-      <section class="results" aria-label="Results of calculating age">
-        <p class="results__result">
-          <span class="results__number" id="result-year">- -</span> years
-        </p>
+          <p class="results__result">
+            <span class="results__number" id="result-year">3</span>months
+          </p>
 
-        <p class="results__result">
-          <span class="results__number" id="result-year">- -</span> months
-        </p>
-
-        <p class="results__result">
-          <span class="results__number" id="result-year">- -</span> days
-        </p>
-      </section>
+          <p class="results__result">
+            <span class="results__number" id="result-year">26</span>days
+          </p>
+        </section>
+      </div>
     </main>
 
     <footer class="attribution">
