@@ -5,14 +5,29 @@
   &__number {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    justify-items: center;
+    // justify-items: center;
     gap: 1.5rem;
+
+    @include m.tablet {
+      display: flex;
+      gap: 3.5rem;
+    }
   }
 
   &__input {
     display: flex;
     flex-direction: column;
     max-width: 9rem;
+
+    @include m.tablet {
+      max-width: 16rem;
+    }
+  }
+
+  &__input-num {
+    @include m.tablet {
+      font-size: 3.2rem;
+    }
   }
 
   &__submit {
@@ -23,12 +38,27 @@
     padding: 2rem;
     border-radius: 50%;
     margin: 3rem auto;
-    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    @include m.tablet {
+      margin: 0;
+    }
+
+    &:hover {
+      cursor: pointer;
+      background-color: v.$off-black;
+    }
   }
 }
 
 .submit-line {
   position: relative;
+
+  @include m.tablet {
+    display: flex;
+    justify-content: flex-end;
+  }
+
   &::before {
     content: "";
     position: absolute;

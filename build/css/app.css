@@ -405,6 +405,11 @@ input {
   width: 95%;
   margin: 0 auto;
 }
+@media (min-width: 768px) {
+  .container {
+    max-width: 78rem;
+  }
+}
 
 .content-center {
   display: flex;
@@ -412,22 +417,48 @@ input {
   justify-content: center;
 }
 
+@media (min-width: 768px) {
+  .pd-tablet-15 {
+    padding: 15rem 0;
+  }
+}
+
 .calc {
   background-color: hsl(0, 0%, 100%);
   padding: 5rem 2.5rem;
   border-radius: 2.5rem 2.5rem 15rem 2.5rem;
 }
+@media (min-width: 768px) {
+  .calc {
+    padding: 6rem;
+  }
+}
 
 .inputs__number {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  justify-items: center;
   gap: 1.5rem;
+}
+@media (min-width: 768px) {
+  .inputs__number {
+    display: flex;
+    gap: 3.5rem;
+  }
 }
 .inputs__input {
   display: flex;
   flex-direction: column;
   max-width: 9rem;
+}
+@media (min-width: 768px) {
+  .inputs__input {
+    max-width: 16rem;
+  }
+}
+@media (min-width: 768px) {
+  .inputs__input-num {
+    font-size: 3.2rem;
+  }
 }
 .inputs__submit {
   position: relative;
@@ -437,11 +468,26 @@ input {
   padding: 2rem;
   border-radius: 50%;
   margin: 3rem auto;
+  transition: background-color 0.3s ease;
+}
+@media (min-width: 768px) {
+  .inputs__submit {
+    margin: 0;
+  }
+}
+.inputs__submit:hover {
   cursor: pointer;
+  background-color: hsl(0, 0%, 8%);
 }
 
 .submit-line {
   position: relative;
+}
+@media (min-width: 768px) {
+  .submit-line {
+    display: flex;
+    justify-content: flex-end;
+  }
 }
 .submit-line::before {
   content: "";
@@ -457,6 +503,11 @@ input {
 .results {
   font-size: 6rem;
   font-weight: bolder;
+}
+@media (min-width: 768px) {
+  .results {
+    font-size: 10rem;
+  }
 }
 .results__result {
   font-weight: bolder;

@@ -5,6 +5,10 @@
   font-size: 6rem;
   font-weight: bolder;
 
+  @include m.tablet {
+    font-size: 10rem;
+  }
+
   &__result {
     font-weight: bolder;
     color: v.$off-black;
