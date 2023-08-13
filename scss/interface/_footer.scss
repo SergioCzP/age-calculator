@@ -1,0 +1,18 @@
+@use "base/variables" as v;
+@use "base/mixins" as m;
+
+.footer {
+  background-color: v.$white;
+  padding: 2.5rem;
+
+  &__paragraph {
+    text-align: center;
+    font-weight: 700;
+  }
+
+  &__link {
+    display: inline;
+    color: v.$purple;
+    font-weight: 800;
+  }
+}
