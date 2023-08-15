@@ -49,6 +49,28 @@
       background-color: v.$off-black;
     }
   }
+
+  &__label {
+    transition: color 0.3s ease;
+  }
+
+  // Style errors
+  &__label--error {
+    color: v.$light-red;
+  }
+
+  &__input-num--error {
+    border: solid 0.1rem v.$light-red;
+  }
+
+  &__error-message {
+    color: v.$light-red;
+    font-weight: 700;
+    font-size: 1.4rem;
+    letter-spacing: 0.1rem;
+    text-transform: none;
+    transition: all 0.3s ease;
+  }
 }
 
 .submit-line {
@@ -69,4 +91,8 @@
     left: 0;
     background-color: v.$light-grey;
   }
+}
+
+.hidden {
+  display: none;
 }

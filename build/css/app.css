@@ -479,6 +479,23 @@ input {
   cursor: pointer;
   background-color: hsl(0, 0%, 8%);
 }
+.inputs__label {
+  transition: color 0.3s ease;
+}
+.inputs__label--error {
+  color: hsl(0, 100%, 67%);
+}
+.inputs__input-num--error {
+  border: solid 0.1rem hsl(0, 100%, 67%);
+}
+.inputs__error-message {
+  color: hsl(0, 100%, 67%);
+  font-weight: 700;
+  font-size: 1.4rem;
+  letter-spacing: 0.1rem;
+  text-transform: none;
+  transition: all 0.3s ease;
+}
 
 .submit-line {
   position: relative;
@@ -498,6 +515,10 @@ input {
   top: 50%;
   left: 0;
   background-color: hsl(0, 0%, 86%);
+}
+
+.hidden {
+  display: none;
 }
 
 .results {

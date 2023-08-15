@@ -13,7 +13,9 @@
 
     <title>Frontend Mentor | Age calculator app</title>
     <link rel="stylesheet" href="build/css/app.css" />
+    <script defer src="app.js"></script>
   </head>
+
   <body class="bg-off-white">
     <main class="content-center hg-100-vh pd-tablet-15">
       <div class="calc container">
@@ -27,7 +29,11 @@
                   type="number"
                   id="day"
                   placeholder="DD"
+                  min="1"
                 />
+                <label for="day" class="inputs__error-message hidden"
+                  >This field is required</label
+                >
               </div>
 
               <div class="inputs__input">
@@ -37,7 +43,11 @@
                   type="number"
                   id="month"
                   placeholder="MM"
+                  min="1"
                 />
+                <label for="month" class="inputs__error-message hidden"
+                  >This field is required</label
+                >
               </div>
 
               <div class="inputs__input">
@@ -47,7 +57,11 @@
                   type="number"
                   id="year"
                   placeholder="YYYY"
+                  min="1"
                 />
+                <label for="year" class="inputs__error-message hidden"
+                  >This field is required</label
+                >
               </div>
             </div>
 
