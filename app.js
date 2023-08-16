@@ -1,7 +1,13 @@
 "use strict";
 
+// Form elements
 const submit = document.querySelector(".inputs__submit");
 const arrInputs = [...document.querySelectorAll("input")];
+
+// Result elements
+const resultYear = document.getElementById("result-year");
+const resultMonth = document.getElementById("result-month");
+const resultDay = document.getElementById("result-day");
 
 // Current date
 const currDate = new Date();
@@ -125,13 +131,41 @@ const isCorrect = function () {
   return false;
 };
 
+const displayAge = function (year, month, day) {
+  resultYear.textContent = year;
+  resultMonth.textContent = month;
+  resultDay.textContent = day;
+};
+
+const calcAge = function () {
+  const introducedDate = new Date(year.value, month.value - 1, day.value);
+
+  const timePassed = currDate - introducedDate;
+
+  // 31_557_600_000 Aprox miliseconds of 1 year
+  const ageYear = Math.floor(timePassed / 31_557_600_000);
+
+  // 2_629_800_000 Aprox miliseconds of 1 month
+  const ageMonth = Math.floor((timePassed / 2_629_800_000) % 12);
+
+  const yearMonthPast = introducedDate;
+
+  yearMonthPast.setMilliseconds(
+    31_557_600_000 * ageYear + 2_629_800_000 * ageMonth
+  );
+
+  const ageDay = Math.floor((currDate - yearMonthPast) / 1000 / 60 / 60 / 24);
+
+  displayAge(ageYear, ageMonth, ageDay);
+};
+
 // Event listeners
 submit.addEventListener("click", function (e) {
   e.preventDefault();
   clearErrors();
 
   if (isCorrect()) {
-    console.log("CORRECT");
+    calcAge();
   }
 });
 
