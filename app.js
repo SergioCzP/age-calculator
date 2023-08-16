@@ -106,6 +106,19 @@ const isValidInput = function () {
     }
   }
 
+  if (isYearValid && isMonthValid) {
+    console.log(currDay);
+    console.log(currMonth);
+
+    if (
+      // +month.value === 2 &&
+      day.value > daysInMonth(month.value, year.value)
+    ) {
+      displayNotValid(day, "Must be a valid day");
+      return false;
+    }
+  }
+
   return validatedInputs;
 };
 
@@ -141,6 +154,7 @@ const calcAge = function () {
   const introducedDate = new Date(year.value, month.value - 1, day.value);
 
   const timePassed = currDate - introducedDate;
+  // console.log(introducedDate);
 
   // 31_557_600_000 Aprox miliseconds of 1 year
   const ageYear = Math.floor(timePassed / 31_557_600_000);
